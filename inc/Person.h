@@ -5,9 +5,10 @@ struct Person {
 
 typedef struct Person Person;
 
-void Person_new(char *name, int age);
+Person *Person_new(char *name, int age);
 void Person_setAge(Person *per, int newAge);
 void Person_setName(Person *per, char *newName);
+void Person_printPerson(Person *per);
 
 void showWelcomeMessage();
 
