@@ -14,6 +14,8 @@ Person *Person_new(char *name, int age) {
 }
 
 void Person_delete(Person *per) {
+  _Person_onDelete(per);
+
   free(per);
 }
 
@@ -30,6 +32,11 @@ void Person_printPerson(Person *per) {
   int age = per->age;
 
   printf("Hello %s, your age is %d\n", name, age);
+}
+
+//Private
+void _Person_onDelete(Person *per) {
+  printf("We are sad that you decided to kill '%s',\nGood bye, anyways :(\n", per->name);
 }
 
 void _Person_setNameAge(Person *per, char *newName, int newAge) {

@@ -17,4 +17,5 @@ void Person_printPerson(Person *per);
 
 //Private
 void _Person_setNameAge(Person *per, char *newName, int newAge);
+void _Person_onDelete(Person *per);
 #endif
