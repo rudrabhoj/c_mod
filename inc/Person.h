@@ -10,3 +10,6 @@ void Person_setAge(Person *per, int newAge);
 void Person_setName(Person *per, char *newName);
 
 void showWelcomeMessage();
+
+//Private
+void Person__setNameAge(Person *per, char *newName, int newAge);
