@@ -1,3 +1,5 @@
+#ifndef __C_MOD__PERSON_H__
+#define __C_MOD__PERSON_H__
 struct Person {
   char *name;
   int age;
@@ -13,3 +15,4 @@ void Person_printPerson(Person *per);
 
 //Private
 void Person__setNameAge(Person *per, char *newName, int newAge);
+#endif
