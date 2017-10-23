@@ -9,6 +9,7 @@ Person *Person_new(char *name, int age) {
   per->name = malloc(sizeof(char) * 65);
 
   _Person_setNameAge(per, name, age);
+  _Person_assignMethods(per);
 
   return per;
 }
@@ -35,6 +36,14 @@ void Person_printPerson(Person *per) {
 }
 
 //Private
+void _Person_assignMethods(Person *per) {
+  per->printPerson = Person_printPerson;
+  per->delete = Person_delete;
+  per->setAge = Person_setAge;
+  per->setName = Person_setName;
+}
+
+
 void _Person_onDelete(Person *per) {
   printf("We are sad that you decided to kill '%s',\nGood bye, anyways :(\n", per->name);
 }

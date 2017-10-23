@@ -3,6 +3,12 @@
 struct Person {
   char *name;
   int age;
+
+  void (*delete)(struct Person *per);
+
+  void (*setAge)(struct Person *per, int newAge);
+  void (*setName)(struct Person *per, char *newName);
+  void (*printPerson)(struct Person *per);
 };
 
 typedef struct Person Person;
@@ -16,6 +22,8 @@ void Person_printPerson(Person *per);
 
 
 //Private
-void _Person_setNameAge(Person *per, char *newName, int newAge);
 void _Person_onDelete(Person *per);
+void _Person_assignMethods(Person *per);
+
+void _Person_setNameAge(Person *per, char *newName, int newAge);
 #endif
