@@ -13,6 +13,10 @@ Person *Person_new(char *name, int age) {
   return per;
 }
 
+void Person_delete(Person *per) {
+  free(per);
+}
+
 void Person_setAge(Person *per, int newAge) {
   per->age = newAge;
 }
