@@ -4,13 +4,6 @@
 
 #include <Person.h>
 
-int main(int argc, char **argv) {
-  Person *rudra = Person_new("Rudrabhoj Bhati", 23);
-  Person_printPerson(rudra);
-
-  return 0;
-}
-
 Person *Person_new(char *name, int age) {
   Person *per = malloc(sizeof(Person));
   per->name = malloc(sizeof(char) * 65);

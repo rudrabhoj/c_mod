@@ -1,1 +1,1 @@
-clang -o bin/app src/Person.c -Iinc
+clang -o bin/app src/app.c src/Person.c -Iinc
