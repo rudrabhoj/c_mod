@@ -5,7 +5,8 @@
 #include <Person.h>
 
 int main(int argc, char **argv) {
-  showWelcomeMessage();
+  Person *rudra = Person_new("Rudrabhoj Bhati", 23);
+  Person_printPerson(rudra);
 
   return 0;
 }
@@ -37,8 +38,4 @@ void Person_printPerson(Person *per) {
 void Person__setNameAge(Person *per, char *newName, int newAge) {
   Person_setName(per, newName);
   Person_setAge(per, newAge);
-}
-
-void showWelcomeMessage() {
-  printf("Success!\n");
 }
