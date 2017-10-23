@@ -14,5 +14,5 @@ void Person_printPerson(Person *per);
 
 
 //Private
-void Person__setNameAge(Person *per, char *newName, int newAge);
+void _Person_setNameAge(Person *per, char *newName, int newAge);
 #endif
